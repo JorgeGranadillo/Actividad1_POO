@@ -1,0 +1,44 @@
+import math
+
+def main():
+    # Usamos un bucle para asegurarnos de que el usuario ingrese un número válido
+    while True:
+        try:
+            # Pedir al usuario que ingrese el radio
+            radio_str = input("Por favor, ingrese el radio del círculo: ")
+
+            # Convertir la entrada a un número flotante (decimal)
+            radio = float(radio_str)
+
+            # Validar que el radio sea un número positivo
+            if radio <= 0:
+                print("Error: El radio debe ser un número positivo. Por favor, intente de nuevo.")
+                continue # Volver al inicio del bucle
+
+            # Si todo es correcto, salir del bucle
+            break
+
+        except ValueError:
+            # Capturar el error si el usuario no ingresa un número
+            print("Error: Ingrese un número válido. Por favor, intente de nuevo.")
+
+
+    # Usamos math.pi para el valor de PI, que es más preciso
+    pi = math.pi
+
+    # Calcular el área del círculo
+    # Fórmula: Área = PI * radio^2
+    area = pi * (radio ** 2)
+
+    # Calcular la longitud de la circunferencia
+    # Fórmula: Longitud = 2 * PI * radio
+    longitud = 2 * pi * radio
+
+    print("\n--- RESULTADOS DEL CÍRCULO ---")
+    print(f"Radio: {radio}")
+    print(f"Área del círculo: {area:.2f}")
+    print(f"Longitud de la circunferencia: {longitud:.2f}")
+
+# Punto de entrada principal
+if __name__ == "__main__":
+    main()
