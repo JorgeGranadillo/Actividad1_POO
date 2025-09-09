@@ -1,0 +1,34 @@
+# Datos de entrada: Edad de Juan (proporcionada por el usuario)
+# Datos de salida: Edad de Juan, Edad de Alberto, Edad de Ana, Edad de la mamá
+
+# Usamos un bucle 'while' para asegurarnos de que el usuario ingrese un valor válido
+while True:
+    try:
+        # Pedir al usuario que ingrese la edad de Juan
+        edad_juan_str = input("Por favor, ingrese la edad de Juan: ")
+
+        # Intentar convertir la entrada a un número entero
+        edad_juan = int(edad_juan_str)
+
+        # Si la conversión fue exitosa, salimos del bucle
+        break
+
+    except ValueError:
+        # Si la conversión falla (por ejemplo, si el usuario ingresa texto),
+        # se ejecuta este bloque de código.
+        print("Error: Ingrese un número válido. Por favor, intente de nuevo.")
+
+# Calcular la edad de Alberto
+edad_alberto = (2 / 3) * edad_juan
+
+# Calcular la edad de Ana
+edad_ana = (4 / 3) * edad_juan
+
+# Calcular la edad de la mamá
+edad_mama = edad_juan + edad_alberto + edad_ana
+
+print("\n--- EDADES CALCULADAS ---")
+print(f"La edad de Juan es: {edad_juan} años")
+print(f"La edad de Alberto es: {edad_alberto} años")
+print(f"La edad de Ana es: {edad_ana} años")
+print(f"La edad de la mamá es: {edad_mama} años")
