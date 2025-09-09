@@ -1,0 +1,24 @@
+def main():
+    # Definición de las variables dadas en el enunciado
+    horas_trabajadas = 48
+    valor_por_hora = 5000
+    porcentaje_retencion = 0.125  # 12.5% expresado como un decimal
+
+    # 1. Calcular el salario bruto
+    salario_bruto = horas_trabajadas * valor_por_hora
+
+    # 2. Calcular la retención en la fuente
+    retencion_fuente = salario_bruto * porcentaje_retencion
+
+    # 3. Calcular el salario neto
+    salario_neto = salario_bruto - retencion_fuente
+
+    # Mostrar los resultados
+    print("--- SALARIO DEL TRABAJADOR ---")
+    print(f"Salario Bruto: ${salario_bruto:,.0f}")
+    print(f"Retención en la Fuente (12.5%): ${retencion_fuente:,.0f}")
+    print(f"Salario Neto: ${salario_neto:,.0f}")
+
+# Punto de entrada principal
+if __name__ == "__main__":
+    main()
