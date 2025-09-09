@@ -1,0 +1,42 @@
+import math
+
+def main():
+    # --- ENTRADA DE DATOS ---
+    # Usamos un bucle 'while' para asegurarnos de que el usuario ingrese un número válido
+    while True:
+        try:
+            # Pedir al usuario que ingrese un número
+            numero_str = input("Por favor, ingrese un número: ")
+
+            # Intentar convertir la entrada a un número
+            numero = float(numero_str) # Usamos float para aceptar números decimales
+
+            # Si la conversión es exitosa, salimos del bucle
+            break
+
+        except ValueError:
+            # Si la conversión falla, mostramos un mensaje de error y el bucle se repite
+            print("Error: Ingrese un número válido. Por favor, intente de nuevo.")
+
+    # --- PROCESO ---
+    # Calcular el cuadrado del número
+    # El cuadrado es el número elevado a la potencia de 2
+    cuadrado = numero ** 2
+
+    # Calcular el cubo del número
+    # El cubo es el número elevado a la potencia de 3
+    cubo = numero ** 3
+
+    # También se pueden usar funciones de la biblioteca math para mayor precisión
+    # cuadrado_math = math.pow(numero, 2)
+    # cubo_math = math.pow(numero, 3)
+
+    # --- SALIDA ---
+    print("\n--- RESULTADOS ---")
+    print(f"El número ingresado es: {numero}")
+    print(f"El cuadrado de {numero} es: {cuadrado}")
+    print(f"El cubo de {numero} es: {cubo}")
+
+# Punto de entrada principal
+if __name__ == "__main__":
+    main()
